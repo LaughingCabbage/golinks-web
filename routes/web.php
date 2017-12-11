@@ -19,4 +19,11 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-//Route::get('/portal', 'PortalController@index')->name('portal');
+Route::get('/portal', 'PortalController@index')->name('portal');
+
+Route::get('/logout', function(){
+    Session::flush();
+    Auth::logout();
+    return Redirect::to('/login')
+        ->with('status', 'You have successfully logged out');
+});
