@@ -27,3 +27,5 @@ Route::get('/logout', function(){
     return Redirect::to('/login')
         ->with('status', 'You have successfully logged out');
 });
+
+Route::get('/admin', 'AdminController@index')->name('admin');
