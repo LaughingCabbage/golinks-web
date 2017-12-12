@@ -29,3 +29,5 @@ Route::get('/logout', function(){
 });
 
 Route::get('/admin', 'AdminController@index')->name('admin');
+
+Route::get('/blog', 'BlogController@index')->name('blog');
