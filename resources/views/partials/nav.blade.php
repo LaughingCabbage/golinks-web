@@ -5,11 +5,11 @@
             <li class="nav-item active"> {{--Add spacing between site name and buttons --}}
                 <a class="nav-link"><span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">{{--Home--}}
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
             @if (Route::has('login')) {{--Begin defining navbar buttons --}}
             @auth
-            <li class="nav-item active">{{--Home--}}
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item active"> {{--Logout--}}
                 <a class="nav-link" href="{{ route('logout') }}">Logout <span class="sr-only">(current)</span></a>
             </li>
