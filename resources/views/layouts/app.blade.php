@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
+
 @push('stylesheets')
 {{ Html::style('css/mod.css') }}
 @endpush
@@ -9,11 +10,7 @@
 <body>
 @include('partials.nav')
 
-@if (session('status'))
-    <div class="alert alert-success">
-        {{ session('status') }}
-    </div>
-@endif
+@include('partials.message')
 
 @yield('content')
 
