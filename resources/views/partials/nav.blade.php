@@ -8,6 +8,9 @@
             <li class="nav-item active">{{--Home--}}
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">{{--Blog--}}
+                <a class="nav-link" href="/blog">Blog <span class="sr-only">(current)</span></a>
+            </li>
             @if (Route::has('login')) {{--Begin defining navbar buttons --}}
             @auth
             <li class="nav-item active"> {{--Logout--}}
