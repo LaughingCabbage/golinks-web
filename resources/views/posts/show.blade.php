@@ -14,16 +14,6 @@
                 <h1>{{ $post->title }}</h1>
                 <p class="lead">{{ $post->body }} </p>
             </div>
-            @auth
-            <hr>
-      
-            <div class="col-sm-6">
-                <a href="#" class = "btn btn-primary btn-block">Edit</a>
-            </div>
-            <div class="col-sm-6">
-                <a href="#" class="btn btn-danger btn-block">Delete</a>
-            </div>
-            @endauth
         </div>
 
         <aside class="col-sm-3 ml-sm-auto blog-sidebar">
@@ -38,6 +28,15 @@
                     <dd>{{ date_format($post->updated_at, 'M j, Y') }}</dd>
                 </dl> 
                 @endif
+                @auth
+                <hr>
+                <div class="col-sm-6">
+                    <a href="#" class = "btn btn-primary btn-block">Edit</a>
+                </div>
+                <div class="col-sm-6">
+                    <a href="#" class="btn btn-danger btn-block">Delete</a>
+                </div>
+                @endauth
             </div>
         </aside>
     </div>
