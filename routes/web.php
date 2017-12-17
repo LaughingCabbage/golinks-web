@@ -30,6 +30,6 @@ Route::get('/logout', function(){
 
 Route::get('/admin', 'AdminController@index')->name('admin');
 
-Route::get('/blog', 'BlogController@index')->name('blog');
+Route::get('/blog', 'PostController@index')->name('blog');
 
 Route::resource('blog/post', 'PostController');
