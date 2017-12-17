@@ -7,6 +7,7 @@
 @endpush
 
 @section('content')
+<main role="main" class="container">
     <div class="row">
         <div class="col-md-10">
             <h1>Posts</h1>
@@ -16,28 +17,16 @@
             <a href="{{ route('post.create') }}" class="btn btn-lg btn-block btn-primary">Create Post</a>
         </div>
     </div>
-
+    <hr>
     <div class="row">
-        <div class="col-md-12">
-            <table class="table">
-                <thead>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Body</th>
-                    <th>Created</th>
-                    <th></th>
-                </thead>
-                <tbody>
-                    @foreach($posts as $post)
-                        <tr>
-                            <th>{{ $post->id }}</th>
-                            <td>{{ $post->title }}</td>
-                            <td>{{ $post->body }}</td>
-                            <td>{{ $post->created_at }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+        @foreach($posts as $post)
+        <div class="col-sm-8 blog-main">
+            <div class="blog-post">
+                <a href="{{ route('post.show',$post->id) }}">{{ $post->title }}</a>
+                <p class="text-truncate">{{ $post->body }} </p>
+            </div>
+        </div>        
+        @endforeach
     </div>
+</main>
 @endsection
