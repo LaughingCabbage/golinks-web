@@ -27,6 +27,12 @@
   p{
     word-break: break-all;
   }
+
+  .text.truncate{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
   
   
   /*
