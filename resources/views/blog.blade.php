@@ -18,12 +18,17 @@
         </div>
     </div>
     <hr>
+
     <div class="row">
         @foreach($posts as $post)
+        
         <div class="col-sm-8 blog-main">
-            <div class="blog-post">
-                <a href="{{ route('post.show',$post->id) }}">{{ $post->title }}</a>
-                <p class="text-truncate">{{ $post->body }} </p>
+            <div class="card bg-light mb-3" style="max-width: 100rem;">
+                <div class="card-header">{{ date_format($post->created_at, 'M j, Y') }}</div>
+                <div class="card-body">
+                    <h1 class="card-title"><a href="{{ route('post.show',$post->id) }}">{{ $post->title }}</a></h1>
+                    <p class="card-text text-truncate">{{ $post->body }}</p>
+                </div>
             </div>
         </div>        
         @endforeach
