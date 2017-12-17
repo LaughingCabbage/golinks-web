@@ -2,11 +2,7 @@
  * Globals
  */
 
- @media (min-width: 48em) {
-    html {
-      font-size: 18px;
-    }
-  }
+
 
   body {
     color: #555;
@@ -26,6 +22,10 @@
   .h6 {
     font-weight: 400;
     color: #333;
+  }
+
+  p{
+    word-break: break-all;
   }
   
   
@@ -143,3 +143,5 @@
  .btn-outline-secondary {
      border-color: #9e59a0;
  }
+
+
