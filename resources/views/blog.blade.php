@@ -34,8 +34,5 @@
         </div>        
         @endforeach
     </div>
-    <div class="col-sm-8 center-block">
-        {!! $posts->links('pagination::bootstrap-4') !!}    
-    </div>
 </main>
 @endsection
