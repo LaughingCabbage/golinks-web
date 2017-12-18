@@ -28,15 +28,23 @@
                     <dd>{{ date_format($post->updated_at, 'M j, Y') }}</dd>
                 </dl> 
                 @endif
+                <dl class="dl-horizontal">
+                    <dt>Url:</dt>
+                    <dd>{{ url($post->slug) }}</dd>
+                </dl>
                 @auth
                 <hr>
-                <div class="col-sm-6">
-                    <a href="#" class = "btn btn-primary btn-block">Edit</a>
-                </div>
-                <div class="col-sm-6">
-                    <a href="#" class="btn btn-danger btn-block">Delete</a>
-                </div>
+                {!! Html::linkRoute('post.edit', 'Edit', [$post->id], ['class' => 'btn btn-primary btn-lg btn-block']) !!}
+                
+                    {{ Form::open(['route' => ['post.destroy', $post->id], 'method' => 'DELETE']) }}
+
+                    {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-lg btn-block']) }}
+
+                    {{ Form::close() }}
+                
                 @endauth
+                {!! Html::linkRoute('blog', '<< Back', [$post->id], ['class' => 'btn btn-primary btn-lg btn-block']) !!}
+               
             </div>
         </aside>
     </div>
