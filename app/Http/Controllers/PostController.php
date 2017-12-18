@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use Session;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -16,7 +17,7 @@ class PostController extends Controller
     public function index()
     {
         //grab posts from database
-        $posts = Post::all();
+        $posts = Post::paginate(5);
 
         return view('blog', compact('posts'));
     }
@@ -76,7 +77,11 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        if (Auth::check()){
+            $post = Post::find($id);
+            return view('posts.edit', compact('post'));
+        }
+        return redirect()->route('post.show', $id);
     }
 
     /**
@@ -88,7 +93,19 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, array(
+            'title' => 'required|max:255',
+            'body' => 'required'
+        ));
+
+        $post = Post::find($id);
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+
+        Session::flash('success', 'Article Updated!');
+        return redirect()->route('post.show', $post->id);
+
     }
 
     /**
@@ -99,6 +116,10 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+
+        Session::flash('success', 'Article Deleted');
+        return redirect()->route('post.index');
     }
 }

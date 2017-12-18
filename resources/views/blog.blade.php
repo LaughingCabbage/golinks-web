@@ -12,16 +12,17 @@
         <div class="col-md-10">
             <h1>Posts</h1>
         </div>
-
+        @auth
         <div class="col-md-2">
             <a href="{{ route('post.create') }}" class="btn btn-lg btn-block btn-primary">Create Post</a>
         </div>
+        @endauth
     </div>
+    
     <hr>
 
     <div class="row">
         @foreach($posts as $post)
-        
         <div class="col-sm-8 blog-main">
             <div class="card bg-light mb-3" style="max-width: 100rem;">
                 <div class="card-header">{{ date_format($post->created_at, 'M j, Y') }}</div>
@@ -32,6 +33,9 @@
             </div>
         </div>        
         @endforeach
+    </div>
+    <div class="col-sm-8 center-block">
+        {!! $posts->links('pagination::bootstrap-4') !!}    
     </div>
 </main>
 @endsection
