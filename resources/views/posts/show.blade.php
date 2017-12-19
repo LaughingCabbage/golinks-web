@@ -21,7 +21,6 @@
                 <dl class="dl-horizontal">
                     <dt>Created:</dt>
                     <dd>{{ date_format($post->created_at, 'M j, Y') }}</dd>
-                </dl>
                 @if($post->created_at != $post->updated_at)
                 <dl class="dl-horizontal">
                     <dt>Updated:</dt>
@@ -36,11 +35,11 @@
                 <hr>
                 {!! Html::linkRoute('post.edit', 'Edit', [$post->id], ['class' => 'btn btn-primary btn-lg btn-block']) !!}
                 
-                    {{ Form::open(['route' => ['post.destroy', $post->id], 'method' => 'DELETE']) }}
+                {{ Form::open(['route' => ['post.destroy', $post->id], 'method' => 'DELETE']) }}
 
-                    {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-lg btn-block']) }}
+                {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-lg btn-block']) }}
 
-                    {{ Form::close() }}
+                {{ Form::close() }}
                 
                 @endauth
                 {!! Html::linkRoute('blog', '<< Back', [$post->id], ['class' => 'btn btn-primary btn-lg btn-block']) !!}
