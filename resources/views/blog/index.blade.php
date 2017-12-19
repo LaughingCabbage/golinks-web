@@ -25,7 +25,7 @@
             <div class="card bg-light mb-3" style="max-width: 100rem;">
                 <div class="card-header">{{ date_format($post->created_at, 'M j, Y') }}</div>
                 <div class="card-body">
-                    <h1 class="card-title"><a href="{{ route('post.show',$post->id) }}">{{ $post->title }}</a></h1>
+                    <h1 class="card-title"><a href="{{ route('blog.article', $post->slug) }}">{{ $post->title }}</a></h1>
                     <p class="card-text text-truncate">{{ $post->body }}</p>
                 </div>
             </div>
