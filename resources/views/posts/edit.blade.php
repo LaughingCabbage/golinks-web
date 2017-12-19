@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '| Create New Post')
+@section('title', '| Edit Post')
 
 @push('stylesheets')
  {{ Html::style('css/parsley.css') }}

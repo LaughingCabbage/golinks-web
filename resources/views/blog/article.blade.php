@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '| {{$post->title}}')
+@section('title', '| View Article')
 
 @push('stylesheets')
 {{ Html::style('css/blog.css') }}

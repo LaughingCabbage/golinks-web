@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title' | 'Posts')
+@section('title' | 'All Posts')
 
 @push('stylesheets')
 {{ Html::style('css/blog.css') }}
