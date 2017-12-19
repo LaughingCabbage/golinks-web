@@ -18,8 +18,7 @@ class PostController extends Controller
     {
         //grab posts from database
         $posts = Post::paginate(5);
-
-        return view('blog', compact('posts'));
+        return view('posts.index', compact('posts'));
     }
 
     /**
