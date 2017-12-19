@@ -17,7 +17,7 @@
                 {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
                 
                 {{ Form::label('slug', 'Slug (no whitespace):') }}
-                {{ Form::text('slug', null, array('class' => 'form-control', 'required' => '', 'minlength' => '5', 'maxlength' => '255', 'pattern' => '/^\S*$/' )) }}
+                {{ Form::text('slug', null, array('class' => 'form-control', 'required' => '', 'minlength' => '5', 'maxlength' => '255', 'pattern' => '[\w\d\-\_]+' )) }}
 
                 {{ Form::label('body', "Body:") }}
                 {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '')) }}

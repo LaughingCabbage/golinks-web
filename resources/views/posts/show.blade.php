@@ -21,6 +21,7 @@
                 <dl class="dl-horizontal">
                     <dt>Created:</dt>
                     <dd>{{ date_format($post->created_at, 'M j, Y') }}</dd>
+                </dl>
                 @if($post->created_at != $post->updated_at)
                 <dl class="dl-horizontal">
                     <dt>Updated:</dt>
@@ -29,7 +30,7 @@
                 @endif
                 <dl class="dl-horizontal">
                     <dt>Url:</dt>
-                    <dd>{{ url($post->slug) }}</dd>
+                    <dd>{{ url('blog/'.$post->slug) }}</dd>
                 </dl>
                 @auth
                 <hr>
