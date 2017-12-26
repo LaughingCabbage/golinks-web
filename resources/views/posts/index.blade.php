@@ -8,7 +8,7 @@
 
 @section('content')
 <main class="container">
-    <div class="row">
+    <div class="row justify-content-md-center">
         <div class="col-md-10">
             <h1>Posts</h1>
         </div>
@@ -21,9 +21,9 @@
     
     <hr>
 
-    <div class="row">
+    <div class="row justify-content-md-center">
         @foreach($posts as $post)
-        <div class="col-sm-10 blog-main">
+        <div class="col-md-10">
             <div class="card bg-light mb-3" style="max-width: 100rem;">
                 <div class="card-header">{{ date_format($post->created_at, 'M j, Y') }}</div>
                 <div class="card-body">
@@ -34,8 +34,10 @@
         </div>        
         @endforeach
     </div>
-    <div class="col-sm-8 center-block">
-        {!! $posts->links('pagination::bootstrap-4') !!}    
+    <div class="row justify-content-md-center">
+        
+            {{ $posts->links('pagination::bootstrap-4') }}    
+
     </div>
 </main>
 @endsection
