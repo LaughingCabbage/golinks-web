@@ -13,7 +13,6 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            @if (Route::has('login')) {{--Begin defining navbar buttons --}}
             @auth
             <li class="nav-item active"> {{--Logout--}}
                 <a class="nav-link" href="{{ route('logout') }}">Logout <span class="sr-only">(current)</span></a>
@@ -26,15 +25,16 @@
                     <a class="dropdown-item" href="{{ route('portal') }}">Portal</a> {{--Portal--}}
                 </div>
             </li>
-            @else
+            @endauth
+            
+            @guest
             <li class="nav-item active"> {{--Login--}}
                 <a class="nav-link" href="{{ route('login') }}">Login <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active"> {{--Register--}}
                 <a class="nav-link" href="{{ route('register') }}">Register <span class="sr-only">(current)</span></a>
             </li>
-            @endauth
-            @endif
+            @endguest
         </ul>
         {{-- Remove search bar for now
         <form class="form-inline my-2 my-lg-0">
