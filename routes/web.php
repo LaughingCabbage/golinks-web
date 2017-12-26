@@ -13,11 +13,9 @@
 
 use Illuminate\Http\Request;
 
-Route::get('/', 'HomeController@index')->name('home');
-
-
-
 Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/portal', 'PortalController@index')->name('portal');
 
@@ -32,7 +30,7 @@ Route::get('/admin', 'AdminController@index')->name('admin');
 
 Route::get('/blog', 'BlogController@index')->name('blog');
 
-Route::get('/blog/{slug}','BlogController@getPost')
+Route::get('/blog/view/{slug}','BlogController@getPost')
     ->name('blog.article')
     ->where('slug', '[\w\d\-\_]+');
 
