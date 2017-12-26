@@ -18,15 +18,14 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             @auth
-            <li class="nav-item active"> {{--Logout--}}
-                <a class="nav-link" href="{{ route('logout') }}">Logout <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item dropdown"> {{--Dropdown--}}
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Actions
+                Account
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('portal') }}">Portal</a> {{--Portal--}}
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ route('logout') }}">Logout</a> {{--Logout--}}
                 </div>
             </li>
             @endauth
