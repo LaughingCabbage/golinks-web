@@ -6,6 +6,7 @@ $factory->define(App\Post::class, function (Faker $faker) {
     return [
         'title' => $faker->streetName,
         'body' => $faker->paragraph,
-        'slug' => $faker->city
+        'slug' => $faker->slug,
+        'created_at' => $faker->date(),
     ];
 });
