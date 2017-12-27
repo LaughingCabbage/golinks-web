@@ -1,16 +1,50 @@
-@if(Session::has('success'))
-    <div class="alert alert-success" role="alert">
-        {{ Session::get('success') }}
-    </div>
-@endif
+<div class="text-center">
+    @if ($message = Session::get('success'))
 
-@if(count($errors) > 0)
-    <div class="alert alert-danger" role="alert">
-        <strong>Errors: </strong>
-        <ul>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-        </ul>
+    <div class="alert alert-success alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>	
+        <p>{{ $message }}</p>
     </div>
-@endif
+
+    @endif
+
+
+    @if ($message = Session::get('error'))
+
+    <div class="alert alert-danger alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>	
+        <p>{{ $message }}</p>
+    </div>
+
+    @endif
+
+
+    @if ($message = Session::get('warning'))
+
+    <div class="alert alert-warning alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>	
+        <p>{{ $message }}</p>
+    </div>
+
+    @endif
+
+
+    @if ($message = Session::get('info'))
+
+    <div class="alert alert-info alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>	
+        <p>{{ $message }}</p>
+    </div>
+
+    @endif
+
+
+    @if ($errors->any())
+
+    <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">×</button>	
+        Errors:
+    </div>
+
+    @endif
+</div>
