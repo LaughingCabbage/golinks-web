@@ -5,8 +5,9 @@
 
     <title>GoVice @yield('title')</title>
 
-    <link rel="stylesheet" href="{{asset('css/app.css')}}" crossorigin="anonymous"> <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/97b1a9e470.js"></script>
+
+    <link rel="stylesheet" href="{{asset('css/app.css')}}" crossorigin="anonymous">
     @yield('stylesheets')
 @stack('stylesheets')
     

@@ -12,6 +12,7 @@
           <h1 class="card-title">Card title</h1>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           <p class="card-text">Last updated 3 mins ago</p>
+          <i class="fa fa-camera-retro fa-lg"></i> fa-lg
         </div>
     </div>
 
