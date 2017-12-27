@@ -18,7 +18,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             @auth
-            <li class="nav-item dropdown"> {{--Dropdown--}}
+            <li class="nav-item active dropdown"> {{--Dropdown--}}
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Account
                 </a>
