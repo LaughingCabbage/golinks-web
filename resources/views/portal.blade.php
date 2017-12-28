@@ -15,6 +15,9 @@
                     @endif
 
                     You are logged in!
+                    <div class="col-md-10">
+                            <a href="{{ route('post.index') }}" class="btn btn-primary btn-lg btn-block">View All</a>
+                    </div>
                 </div>
             </div>
         </div>
