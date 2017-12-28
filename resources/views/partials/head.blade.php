@@ -8,6 +8,7 @@
     <script src="https://use.fontawesome.com/97b1a9e470.js"></script>
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('css/fontawesome.min.css')}}">
     @yield('stylesheets')
 @stack('stylesheets')
     
