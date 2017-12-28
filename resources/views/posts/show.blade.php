@@ -7,12 +7,12 @@
 @endpush
 
 @section('content')
-<div role="main" class="container">
+<div class="container">
     <div class="row">
         <div class="col-sm-8 blog-main">
-            <div class="blog-post">
-                <h1>{{ $post->title }}</h1>
-                <p class="lead">{{ $post->body }} </p>
+            <div class="card text-center">
+                <div class="card-header">{{ $post->title }}</div>
+                <div class="card-body">{{ $post->body }} </div>
             </div>
         </div>
 
