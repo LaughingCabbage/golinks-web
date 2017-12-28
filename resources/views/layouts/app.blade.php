@@ -7,7 +7,7 @@
 
 @include('partials.head')
 
-<body>
+<body class="bg-secondary">
 @include('partials.nav')
 
 @include('partials.message')
