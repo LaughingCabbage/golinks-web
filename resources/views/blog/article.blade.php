@@ -2,14 +2,12 @@
 
 @section('title', '| View Article')
 
-@push('stylesheets')
-{{ Html::style('css/blog.css') }}
-@endpush
+
 
 @section('content')
 
 <div class="container">
-    <div class="row">
+    <div class="row mt-5">
             <div class="col-sm-8">
                 <div class="card">
                     <div class="card-header text-center">{{ $post->title }}</div>
