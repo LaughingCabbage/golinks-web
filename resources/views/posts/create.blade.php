@@ -7,9 +7,9 @@
 @endpush
 
 @section('content')
-
-    <div class="row justify-content-md-center">
-        <div class="col-md-8">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
             <h1>Create New Blog Post</h1>
             <hr>
             {!! Form::open(array('route' => 'post.store', 'data-parsley-validate' => '')) !!}
@@ -26,7 +26,7 @@
             {!! Form::close() !!}
         </div>
     </div>
-
+</div>
 @endsection
 
 @push('scripts')
