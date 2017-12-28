@@ -8,30 +8,29 @@
 
 @section('content')
 
-<div role="main" class="container">
+<div class="container">
     <div class="row">
-            <div class="col-sm-8 blog-main">
-                <div class="blog-post">
-                    <h1>{{ $post->title }}</h1>
-                    <p class="lead">{{ $post->body }} </p>
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-header text-center">{{ $post->title }}</div>
+                    <div class="card-body">{{ $post->body }} </div>
                 </div>
             </div>
-        
-        <aside class="col-sm-3 ml-sm-auto blog-sidebar">
+        </hr>
+        <aside class="col-sm-3 ml-sm-auto">
             <div class="sizebar-module">
-                <dl class="dl-horizontal">
-                    <dt>Created:</dt>
-                    <dd>{{ date_format($post->created_at, 'M j, Y') }}</dd>
-                </dl>
-                @if($post->created_at != $post->updated_at)
-                <dl class="dl-horizontal">
-                    <dt>Updated:</dt>
-                    <dd>{{ date_format($post->updated_at, 'M j, Y') }}</dd>
-                </dl> 
-                @endif
+                <div class="card">
+                    <div class="card-body">
+                        <dt>Created:</dt>
+                        <dd>{{ date_format($post->created_at, 'M j, Y') }}</dd>
+                        @if($post->created_at != $post->updated_at)
+                        <dt>Updated:</dt>
+                        <dd>{{ date_format($post->updated_at, 'M j, Y') }}</dd> 
+                        @endif
 
-                {!! Html::linkRoute('blog', '<< Back', [$post->id], ['class' => 'btn btn-primary btn-lg btn-block']) !!}
-                
+                        {!! Html::linkRoute('blog', '<< Back', [$post->id], ['class' => 'btn btn-primary btn-lg btn-block']) !!}
+                    </div>
+                </div>
             </div>
         </aside>
     </div>
