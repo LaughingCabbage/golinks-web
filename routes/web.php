@@ -17,6 +17,10 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('/mission', function(){
+    return view('mission');
+});
+
 Route::get('/portal', 'PortalController@index')->name('portal');
 
 Route::get('/logout', function(){

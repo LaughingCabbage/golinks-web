@@ -13,6 +13,9 @@
                 <li class="nav-item active">{{--Home--}}
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item active">{{--Mission--}}
+                    <a class="nav-link" href="/mission">Mission <span class="sr-only">(current)</span></a>
+                </li>
                 <li class="nav-item active">{{--Blog--}}
                     <a class="nav-link" href="/blog">Blog <span class="sr-only">(current)</span></a>
                 </li>
