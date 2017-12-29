@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
   <div class="row justify-content-center">
@@ -20,9 +19,7 @@
     </div>
 
     <div class="col-md-10 mt-1"><hr class="spaceship"></div>
- 
   </div>
-
   <div class="row justify-content-center">
     <div class="col-md-5 mt-3">
       <div class="card text-center">
