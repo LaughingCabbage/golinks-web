@@ -13,7 +13,8 @@
 @include('partials.message')
 
 @yield('content')
-
+@include('partials.footer')
 @include('partials.script')
 </body>
+
 </html>
