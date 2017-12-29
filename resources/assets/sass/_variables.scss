@@ -31,6 +31,9 @@ hr {
     &.globe:after {
       content: "\f0ac";
     }
+    &.spaceship:after{
+      content: "\f197";
+    }
   } 
 
 body {
