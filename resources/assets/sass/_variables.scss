@@ -17,7 +17,6 @@ hr {
       font-family: 'FontAwesome';
       padding: 0 1rem;
       position: absolute;
-      background-color: $secondary;
       left: 50%;
       transform: translatex(-50%);
       margin-top: -0.75em;
@@ -31,10 +30,17 @@ hr {
     &.globe:after {
       content: "\f0ac";
     }
-    &.spaceship:after{
+    &.spaceship-primary:after{
       content: "\f197";
+      background-color: $primary;
     }
-  } 
+
+    &.spaceship-secondary:after{
+      content: "\f197";
+      background-color: $secondary;
+    }
+
+  }
 
 body {
   padding-top: 5rem;

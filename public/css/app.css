@@ -9,7 +9,6 @@ hr:after {
   font-family: 'FontAwesome';
   padding: 0 1rem;
   position: absolute;
-  background-color: #28004d;
   left: 50%;
   -webkit-transform: translatex(-50%);
           transform: translatex(-50%);
@@ -25,8 +24,14 @@ hr.globe:after {
   content: "\F0AC";
 }
 
-hr.spaceship:after {
+hr.spaceship-primary:after {
   content: "\F197";
+  background-color: rgba(0, 16, 41, 0.644);
+}
+
+hr.spaceship-secondary:after {
+  content: "\F197";
+  background-color: #28004d;
 }
 
 body {
