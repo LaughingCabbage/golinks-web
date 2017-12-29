@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="col-md-10 mt-1"><hr class="spaceship"></div>
+    <div class="col-md-10 mt-1"><hr class="spaceship-secondary"></div>
   </div>
   <div class="row justify-content-center">
     <div class="col-md-5 mt-3">
