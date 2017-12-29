@@ -9,11 +9,12 @@
 @section('content')
 <main class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-10 text-center">
             <h1>Recent Posts</h1>
+            <hr class="spaceship">
         </div>
     </div>
-    <hr>
+    
 
     <div class="row justify-content-center">
         @foreach($posts as $post)
