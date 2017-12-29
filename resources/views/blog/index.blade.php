@@ -1,11 +1,8 @@
 @extends('layouts.app')
-
 @section('title', '| Blog')
-
 @push('stylesheets')
 {{ Html::style('css/blog.css') }}
 @endpush
-
 @section('content')
 <main class="container">
     <div class="row justify-content-center">
@@ -14,8 +11,6 @@
             <hr class="spaceship">
         </div>
     </div>
-    
-
     <div class="row justify-content-center">
         @foreach($posts as $post)
         <div class="col-sm-10">
