@@ -35,7 +35,6 @@
                     </div>
                 </li>
                 @endauth
-                
                 @guest
                 <li class="nav-item active"> {{--Login--}}
                     <a class="nav-link" href="{{ route('login') }}">Login <span class="sr-only">(current)</span></a>
@@ -44,13 +43,7 @@
                     <a class="nav-link" href="{{ route('register') }}">Register <span class="sr-only">(current)</span></a>
                 </li>
                 @endguest
-            </ul>
-            {{-- Remove search bar for now
-            <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-            --}}
+            </ul>   
         </div>
     </nav>
 </div>
