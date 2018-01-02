@@ -39,3 +39,9 @@ Route::get('/blog/view/{slug}','BlogController@getPost')
     ->where('slug', '[\w\d\-\_]+');
 
 Route::resource('blog/post', 'PostController');
+
+
+Route::get('api/user', function(){
+    print('get api/user');
+   // return view('mission');
+})->middleware('auth.basic.once');
