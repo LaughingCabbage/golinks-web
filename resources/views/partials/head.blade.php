@@ -9,6 +9,7 @@
 
 	<link rel="stylesheet" href="{{asset('css/app.css')}}" crossorigin="anonymous">
 	<link rel="stylesheet" href="{{asset('css/fontawesome.min.css')}}"> 
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	@yield('stylesheets') @stack('stylesheets')
 
 </head>
